@@ -1,0 +1,58 @@
+USE [music_database]
+GO
+
+/****** Object:  Table [dbo].[songs]    Script Date: 4/6/2021 3:08:58 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[songs](
+	[ID] [int] NOT NULL,
+	[SONG] [varchar](100) NOT NULL,
+	[DURATION] [int] NOT NULL,
+	[UPLOADED_TIME] [datetime] NOT NULL,
+UNIQUE NONCLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+USE [music_database]
+GO
+
+/****** Object:  Table [dbo].[audiobook]    Script Date: 4/6/2021 3:05:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[audiobook](
+	[ID] [int] NOT NULL,
+	[AUDIOBOOK] [varchar](100) NOT NULL,
+	[AUTHOR] [varchar](100) NOT NULL,
+	[NARRATOR] [varchar](100) NOT NULL,
+	[DURATION] [int] NOT NULL,
+	[UPLOADED_TIME] [datetime] NOT NULL,
+UNIQUE NONCLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE podcast (
+    ID int NOT NULL UNIQUE,
+	PODCAST varchar (100)NOT NULL ,
+	DURATION int   NOT NULL ,
+	UPLOADED_TIME DATETIME NOT NULL,
+	HOST varchar(100)NOT NULL ,
+	PARTICIPANTS varchar(100)
+
+);
