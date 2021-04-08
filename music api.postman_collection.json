@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "32df828c-9242-40d5-8862-4da2d8a05564",
+		"name": "music api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Uploading music",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"song\",\r\n\"data\":{    \r\n            \"id\": 22,\r\n            \"name\":\"bollymix\",\r\n            \"duration\":342,\r\n            \"uploadtime\" : \"2021-01-01 00:00:00.000\"\r\n            \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updating song",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"song\",\r\n\"data\":{    \r\n            \"id\": 22,\r\n            \"name\":\"tollymix\",\r\n            \"duration\":342,\r\n            \"uploadtime\" : \"2021-01-01 00:00:00.000\"\r\n            \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofile/song/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofile",
+						"song",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting song",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles/song/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles",
+						"song",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting song Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles/song/23",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles",
+						"song",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creating podcast",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"podcast\",\r\n\"data\":{    \r\n            \"id\": 22,\r\n            \"name\":\"bollymix\",\r\n            \"duration\":342,\r\n            \"uploadtime\" : \"2021-01-01 00:00:00.000\",\r\n            \"host\" : \"fm\",\r\n            \"participants\" : [\"ben\",\"jon\"]\r\n            \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updating podcast",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"podcast\",\r\n\"data\":{    \r\n            \"id\": 22,\r\n            \"name\":\"bollymix\",\r\n            \"duration\":342,\r\n            \"uploadtime\" : \"2021-01-01 00:00:00.000\",\r\n            \"host\" : \"mediarose\",\r\n            \"participants\" : [\"updatedben\",\"jon\"]\r\n            \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles/podcast/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles",
+						"podcast",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get podcast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles/podcast/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles",
+						"podcast",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creating audiobook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"audiobook\",\r\n\"data\":{    \r\n            \"id\": 22,\r\n            \"name\":\"bollymix\",\r\n            \"duration\":342,\r\n            \"uploadtime\" : \"2021-01-01 00:00:00.000\",\r\n            \"author\" : \"Dan\",\r\n            \"narrator\" : \"Jim\"\r\n            \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updating audiobook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"audiobook\",\r\n\"data\":{    \r\n            \"id\": 22,\r\n            \"name\":\"bollymix\",\r\n            \"duration\":342,\r\n            \"uploadtime\" : \"2021-01-01 00:00:00.000\",\r\n            \"author\" : \"updatedDan\",\r\n            \"narrator\" : \"Jim\"\r\n            \r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles/audiobook/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles",
+						"audiobook",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updating audiobook Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:15789/audiofiles/audiobook/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "15789",
+					"path": [
+						"audiofiles",
+						"audiobook",
+						"22"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
